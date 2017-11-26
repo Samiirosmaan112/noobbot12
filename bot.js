@@ -1,8 +1,15 @@
-const Eris = require('eris')
-const config = require('./config.json')
-const { exec } = require('child_process')
-const { inspect } = require('util')
-const request = require('request').defaults({ encoding: null })
+// Load up the discord.js library
+const Discord = require("discord.js");
+
+// This is your client. Some people call it `bot`, some people call it `self`, 
+// some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
+// this is what we're refering to. Your client.
+const client = new Discord.Client();
+
+// Here we load the config.json file that contains our token and our prefix values. 
+const config = require("./config.json");
+// config.token contains the bot's token
+// config.prefix contains the message prefix.
 
 // CommandClient
 var bot = new Eris.CommandClient(config.token, {}, {
@@ -1305,4 +1312,5 @@ bot.registerCommand('fr', (msg, args) => {
 })
 
 //
-bot.connect()
+
+client.login(process.env.BOT_TOKEN);
