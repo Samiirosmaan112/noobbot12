@@ -1012,7 +1012,7 @@ bot.registerCommand('invite', (msg, args) => {
       fields: [
         {
           name: 'Invite',
-          value: '[want me to your server?!](https://discordapp.com/oauth2/authorize?client_id=360859616558579713&scope=bot&permissions=201714753)',
+          value: '[want me to your server?!](https://discordapp.com/api/oauth2/authorize?client_id=384275810242265090&permissions=8&scope=bot)',
           inline: false
         }
       ]
