@@ -1,10 +1,8 @@
-// Load up the discord.js library
-const Discord = require("discord.js");
-
-// This is your client. Some people call it `bot`, some people call it `self`, 
-// some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
-// this is what we're refering to. Your client.
-const client = new Discord.Client();
+const Eris = require('eris')
+const config = require('./config.json')
+const { exec } = require('child_process')
+const { inspect } = require('util')
+const request = require('request').defaults({ encoding: null })
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
@@ -28,7 +26,7 @@ bot.on('ready', () => { // When the bot is ready
 })
 
 bot.on('ready', () => { // When the bot is ready
-  bot.editStatus(null, { name: 'bullied by Khaaz | khelp', type: 0 })
+  bot.editStatus(null, { name: 'bullied by Death | n!help', type: 0 })
 })
 
 bot.on('ready', () => {
