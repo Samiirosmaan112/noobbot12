@@ -1,1 +1,1 @@
-config.json
+worker: node bot.js
